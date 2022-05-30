@@ -1,0 +1,28 @@
+package repeticao;
+
+import java.util.Scanner;
+
+public class AreaTriangulo {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		double area, base = 0, altura = 0;
+		
+		while(base <= 0) {
+			System.out.println("Digite a medida da base do triângulo: ");
+			base = sc.nextDouble();
+		}
+		while(altura <= 0) {
+			System.out.println("Digite a medida da altura do triângulo: ");
+			altura = sc.nextDouble();
+		}
+		
+		area = base*altura/2;
+		System.out.printf("A área do triângulo é %.2f.\n", area);
+		sc.close();
+
+	}
+
+}

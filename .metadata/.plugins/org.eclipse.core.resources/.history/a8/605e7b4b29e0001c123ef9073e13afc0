@@ -1,0 +1,42 @@
+package condicional;
+
+import java.util.Scanner;
+
+public class Aluno {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String disciplina, resultado;
+		//int qtdAulas, faltas;
+		double qtdAulas, faltas, n1, n2, n3, n4, media;
+		
+		System.out.println("Informe o nome da disciplina: ");
+		disciplina = sc.next();
+		System.out.println("Informe a quantidade de aulas dadas: ");
+		qtdAulas = sc.nextInt();
+		System.out.println("Informe a quantidade de faltas: ");
+		faltas = sc.nextInt();
+		System.out.println("Informe a 1º nota: ");
+		n1 = sc.nextDouble();
+		System.out.println("Informe a 2º nota: ");
+		n2 = sc.nextDouble();
+		System.out.println("Informe a 3º nota: ");
+		n3 = sc.nextDouble();
+		System.out.println("Informe a 4º nota: ");
+		n4 = sc.nextDouble();
+		
+		media = (n1+n2+n3+n4)/4;
+		
+		if(media>=6.0 && faltas/qtdAulas>=0.75) {
+			resultado = "aprovado";
+		}else {
+			resultado = "reprovado";
+		}
+		
+		System.out.printf("A média em %s foi %.1f, e possui %f.0 faltas.",disciplina, media, faltas);
+		System.out.printf("\nCom os valores acima o aluno está %s em %s.", resultado, disciplina);
+		
+		sc.close();
+	}
+
+}
