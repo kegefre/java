@@ -5,6 +5,10 @@ public class Veiculo {
 	private double capacidade;
 	private double rendimento;
 
+	public Veiculo() {
+		
+	}
+	
 	public Veiculo(int p, double ca, double co) {
 		passageiros = p;
 		capacidade = ca;
